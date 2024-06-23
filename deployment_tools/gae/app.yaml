@@ -1,9 +1,16 @@
 runtime: python311
 
+automatic_scaling:
+  min_instances: 0
+  max_instances: 15
+
+beta_settings:
+  cloud_sql_instances: "skill-pixel:asia-southeast1:skill-pixel-db"
+
 # Handlers define how to route requests to your application.
 handlers:
-
-- url: .*  # This regex directs all routes to main.bottle
+- url: /.*
   script: auto
   secure: always
+
 
