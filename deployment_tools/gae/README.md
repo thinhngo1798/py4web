@@ -7,7 +7,8 @@ mkdir apps
 touch apps/__init__.py
 # symlink the apps that you want to deploy to GAE, for example:
 cd apps
-ln -s ../../../apps/_default .
+ln -s ../../../apps/notebookgrader-app _default
+ln -s ../../../apps/notebookgrader-app .
 ln -s ../../../apps/.service . 
 cd ..
 ```
