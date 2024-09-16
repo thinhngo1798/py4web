@@ -12,6 +12,10 @@ setup:
 	| grep -v tornado \
 	| grep -v gunicorn \
 	| grep -v memcache > requirements.txt
+	
+	cat ./apps/notebookgrader-app/requirements.txt >> requirements.txt
+
+	echo >> requirements.txt
 	echo mysqlclient >> requirements.txt
 	mkdir -p lib
 	# python3 -m pip install -U --no-deps py4web -t lib/
